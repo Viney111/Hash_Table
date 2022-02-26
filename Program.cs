@@ -29,6 +29,8 @@ namespace Hash_Tables
             }
             //For fetching unique items in array.
             IEnumerable<string> uniqueWords = sentenceWords.Distinct<string>();
+            //Removing "Avoidable" Word of the sentence from the Hash Table.
+            MyMapNode.Remove("avoidable");
             foreach(string word in uniqueWords)
             {
                 int frequencyOfWord = MyMapNode.Get(word);

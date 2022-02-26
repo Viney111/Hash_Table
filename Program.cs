@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text;
 
 namespace Hash_Tables
 {
@@ -10,8 +11,11 @@ namespace Hash_Tables
     {
         static void Main(string[] args)
         {
-            String[] sentenceWords = { "TO", "BE", "OR", "NOT", "TO", "BE" };
-            checkingFrequencyOfWords(sentenceWords);    
+            string[] sentenceWords;
+            string sentence = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+            //Breaking sentence in words & storing in array by split method.
+            sentenceWords = sentence.Split(' ');
+            checkingFrequencyOfWords(sentenceWords);
         }
         public static void checkingFrequencyOfWords(string[] sentenceWords)
         {

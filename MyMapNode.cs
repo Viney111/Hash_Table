@@ -18,6 +18,7 @@ namespace Hash_Table
             items = new LinkedList<KeyValuePair<K, V>>[size];
             this.size = size;
         }
+        //Checking the Key, exists or not !
         public int CheckWord(K key)
         {
             int position = GetArrayPosition(key);

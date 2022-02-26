@@ -20,15 +20,16 @@ namespace Hash_Tables
             foreach (string word in sentenceWords)
             {
                 int count = MyMapNode.CheckWord(word);
+                //Count value using as a Value Pair while adding.
                 MyMapNode.Add(word, count);
             }
+            //For fetching unique items in array.
             IEnumerable<string> uniqueWords = sentenceWords.Distinct<string>();
             foreach(string word in uniqueWords)
             {
                 int frequencyOfWord = MyMapNode.Get(word);
                 Console.WriteLine($"\"{word}\"comes {frequencyOfWord} times");
             }
-
         }
     }
 }
